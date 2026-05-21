@@ -99,3 +99,18 @@ try:
 except Exception as e:
     st.error(f"Database Connection Error: {e}")
     st.stop()
+
+# ==============================
+# SENTIMENT COLORS
+# ==============================
+
+def color_sentiment(val):
+
+    if val == "Positive":
+        return "background-color: green; color: white"
+
+    elif val == "Negative":
+        return "background-color: red; color: white"
+
+    else:
+        return "background-color: gray; color: white"

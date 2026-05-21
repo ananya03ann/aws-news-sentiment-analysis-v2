@@ -26,3 +26,18 @@ Thumbs.db
 LAMBDA_PROJECT/*.zip
 LAMBDA_PROJECT/*.dist-info/
 LAMBDA_PROJECT/__pycache__/
+
+# Lambda packages
+LAMBDA_PROJECT/asn1crypto/
+LAMBDA_PROJECT/bin/
+LAMBDA_PROJECT/certifi/
+LAMBDA_PROJECT/charset_normalizer/
+LAMBDA_PROJECT/dateutil/
+LAMBDA_PROJECT/idna/
+LAMBDA_PROJECT/pg8000/
+LAMBDA_PROJECT/requests/
+LAMBDA_PROJECT/scramp/
+LAMBDA_PROJECT/urllib3/
+LAMBDA_PROJECT/vaderSentiment/
+LAMBDA_PROJECT/*.pyd
+LAMBDA_PROJECT/six.py

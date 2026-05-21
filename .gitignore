@@ -22,3 +22,7 @@ venv/
 # OS files
 .DS_Store
 Thumbs.db
+
+LAMBDA_PROJECT/*.zip
+LAMBDA_PROJECT/*.dist-info/
+LAMBDA_PROJECT/__pycache__/

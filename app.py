@@ -141,3 +141,22 @@ col3.metric("🔴 Negative", negative_count)
 col4.metric("⚪ Neutral", neutral_count)
 
 st.markdown("---")
+
+# ==============================
+# VIEW NEWS SECTION
+# ==============================
+
+if menu == "View News":
+
+    st.subheader("Latest News Articles")
+
+    styled_df = df.style.map(
+        color_sentiment,
+        subset=["sentiment"]
+    )
+
+    st.dataframe(
+        styled_df,
+        use_container_width=True,
+        height=500
+    )

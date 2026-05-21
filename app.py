@@ -63,3 +63,23 @@ Positive score = Positive news
 Negative score = Negative news
 """
 )
+
+# ==============================
+# POSTGRESQL DATABASE CONNECTION
+# ==============================
+
+DB_HOST = "database-1.c3qm2yq0clyo.ap-south-1.rds.amazonaws.com"
+DB_PORT = "5432"
+DB_NAME = "newsdb"
+DB_USER = "postgres"
+DB_PASSWORD = "postgres-123"
+
+DATABASE_URL = (
+    f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}"
+    f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+)
+
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"sslmode": "require"}
+)

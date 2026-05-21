@@ -160,3 +160,44 @@ if menu == "View News":
         use_container_width=True,
         height=500
     )
+
+# ==============================
+# ANALYTICS SECTION
+# ==============================
+
+elif menu == "Analytics":
+
+    st.subheader("Sentiment Distribution")
+
+    sentiment_counts = df["sentiment"].value_counts()
+
+    st.bar_chart(sentiment_counts)
+
+    st.markdown("---")
+
+    pie_chart = px.pie(
+        values=sentiment_counts.values,
+        names=sentiment_counts.index,
+        title="Sentiment Breakdown"
+    )
+
+    st.plotly_chart(
+        pie_chart,
+        use_container_width=True
+    )
+
+    st.markdown("---")
+
+    st.subheader("Sentiment Score Distribution")
+
+    hist_chart = px.histogram(
+        df,
+        x="sentiment_score",
+        nbins=20,
+        title="Sentiment Score Histogram"
+    )
+
+    st.plotly_chart(
+        hist_chart,
+        use_container_width=True
+    )

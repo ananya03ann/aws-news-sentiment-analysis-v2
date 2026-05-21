@@ -83,3 +83,19 @@ engine = create_engine(
     DATABASE_URL,
     connect_args={"sslmode": "require"}
 )
+
+# ==============================
+# LOAD DATA FROM RDS
+# ==============================
+
+query = """
+SELECT *
+FROM news_sentiment
+"""
+
+try:
+    df = pd.read_sql(query, engine)
+
+except Exception as e:
+    st.error(f"Database Connection Error: {e}")
+    st.stop()

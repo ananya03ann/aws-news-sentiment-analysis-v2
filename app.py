@@ -114,3 +114,30 @@ def color_sentiment(val):
 
     else:
         return "background-color: gray; color: white"
+    
+# ==============================
+# PAGE TITLE
+# ==============================
+
+st.title("📰 News Analytics Sentiment Score Dashboard")
+
+st.markdown("---")
+
+# ==============================
+# METRICS
+# ==============================
+
+positive_count = len(df[df["sentiment"] == "Positive"])
+negative_count = len(df[df["sentiment"] == "Negative"])
+neutral_count = len(df[df["sentiment"] == "Neutral"])
+
+total_articles = len(df)
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("📄 Total Articles", total_articles)
+col2.metric("🟢 Positive", positive_count)
+col3.metric("🔴 Negative", negative_count)
+col4.metric("⚪ Neutral", neutral_count)
+
+st.markdown("---")

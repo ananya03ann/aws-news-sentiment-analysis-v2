@@ -201,3 +201,21 @@ elif menu == "Analytics":
         hist_chart,
         use_container_width=True
     )
+
+# ==============================
+# RAW DATA
+# ==============================
+
+with st.expander("📂 View Raw Data"):
+
+    st.dataframe(
+        df,
+        use_container_width=True
+    )
+
+# ==============================
+# REFRESH BUTTON
+# ==============================
+
+if st.button("🔄 Refresh Dashboard"):
+    st.rerun()

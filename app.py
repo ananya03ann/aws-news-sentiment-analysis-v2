@@ -39,3 +39,27 @@ h1, h2, h3 {
 
 </style>
 """, unsafe_allow_html=True)
+
+# ==============================
+# SIDEBAR
+# ==============================
+
+st.sidebar.title("📰 Dashboard Menu")
+
+menu = st.sidebar.radio(
+    "Navigation",
+    ["View News", "Analytics"]
+)
+
+st.sidebar.markdown("---")
+
+st.sidebar.info(
+    """
+Sentiment score indicates whether
+the news article sentiment is positive,
+negative, or neutral.
+
+Positive score = Positive news
+Negative score = Negative news
+"""
+)
